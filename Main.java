@@ -1,35 +1,14 @@
-package kota;
-
 import java.util.ArrayList;
-
+import java.util.Arrays;
 public class Main {
+    ArrayList<String> hewan = new ArrayList<String>(Arrays.asList( "Sapi", "Kelinci", "Kambing", "Unta", "Domba"));
+hewan.remove(1);
+ hewan.remove(1);
+ hewan.remove(1);
 
     public static void main(String[] args) {
-        ArrayList<Konsumsi> listKonsumsi = new ArrayList<>();
-        Konsumsi<Makanan, Minuman> breakfast = new Konsumsi<>();
-        Konsumsi<Makanan, Minuman> lunch = new Konsumsi<>();
+        System.out.println("Sebelum Hapus Index :");
 
-        Makanan roti = new Makanan();
-        roti.setNamaHidangan("Roti Tawar");
-        Minuman susu = new Minuman();
-        susu.setNamaHidangan("Susu Sapi");
-        breakfast.setKonsumsi(roti, susu);
-        listKonsumsi.add(breakfast);
-
-        Makanan nasi = new Makanan();
-        nasi.setNamaHidangan("Nasi Putih");
-        Minuman air = new Minuman();
-        air.setNamaHidangan("Air Putih");
-        lunch.setKonsumsi(nasi, air);
-        listKonsumsi.add(lunch);
-
-        System.out.println("Menu Konsumsi");
-        for (Konsumsi<Makanan, Minuman> konsumsi : listKonsumsi) {
-            Makanan makanan = konsumsi.getM();
-            Minuman minuman = konsumsi.getI();
-
-            System.out.println(makanan.disantap());
-            System.out.println(minuman.disantap());
-        }
     }
+
 }
